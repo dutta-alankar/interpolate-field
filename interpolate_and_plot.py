@@ -118,7 +118,9 @@ else:
     grid_x, grid_y = np.mgrid[0:L:200j, 0:L:200j]
 
     # Interpolate the scattered data from the slice onto the regular grid
-    grid_z = griddata(slice_points[:, :2], slice_values, (grid_x, grid_y), method='cubic')
+    grid_z = griddata(slice_points[:, :2], slice_values, (grid_x, grid_y), method='nearest')
+
+    
 
     # --- Plotting ---
 
@@ -131,13 +133,13 @@ else:
 
         # Use pcolormesh for the colormap.
         # We use LogNorm for the logarithmic scale.
-        positive_grid_z = grid_z[grid_z > 0]
+        
         im = ax.pcolormesh(
             grid_x,
             grid_y,
             grid_z,
             cmap='viridis',
-            # norm=LogNorm(vmin=np.min(positive_grid_z), vmax=np.max(positive_grid_z))
+            
         )
 
         # Add a colorbar
@@ -145,7 +147,7 @@ else:
         cbar.set_label('|vel_baryons - vel_cdms_interp|')
 
         # Add a red cross at the position of the maximum difference
-        # ax.plot(max_diff_position[0], max_diff_position[1], 'rX', markersize=20, markeredgewidth=4, alpha=0.6)
+        ax.plot(max_diff_position[0], max_diff_position[1], 'rX', markersize=20, markeredgewidth=4, alpha=0.6)
 
         # Set plot labels and title
         ax.set_xlabel('X coordinate')
