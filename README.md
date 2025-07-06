@@ -23,7 +23,7 @@ python interpolate_and_plot.py
 
 ## Demo
 
-![Velocity Difference Slice Plot](velocity_difference_slice.png)
+![Velocity Difference Slice Plot](https://github.com/user-attachments/assets/f3fb52b2-32b0-4eba-9afd-006dc90b4683)
 
 ## License
 
