@@ -21,6 +21,10 @@ source venv/bin/activate
 python interpolate_and_plot.py
 ```
 
+## Demo
+
+![Velocity Difference Slice Plot](velocity_difference_slice.png)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
