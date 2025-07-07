@@ -1,6 +1,7 @@
 # Interpolation Project
 
-This repository contains a Python script (`interpolate_and_plot.py`) for interpolating velocity fields and generating slice plots. It demonstrates the use of `numpy`, `scipy`, `matplotlib`, and `vtk` for data generation, interpolation, visualization, and VTK export.
+This repository contains a Python script (`interpolate_and_plot.py`) for interpolating velocity fields and generating slice plots. It demonstrates the use of `numpy`, `scipy`, `matplotlib`, and `vtk` for data generation, interpolation, visualization, and VTK export. 
+This repo currently uses a demo with random arrays. The data that is meant to be used with it is gnerated by `MUSIC` version 2 (https://github.com/cosmo-sims/MUSIC2)
 
 ## Setup
 
